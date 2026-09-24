@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gift Shop BD | Gifts for Every Moment</title>
+<meta name="description" content="Gift Shop BD — thoughtful gifts for birthdays, couples, anniversaries, weddings and special moments.">
+<style>
+:root{--pink:#e83e70;--dark:#241f25;--cream:#fff7f9;--muted:#6e6670;--white:#fff;--line:#f0dce2}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--dark);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-size:24px;font-weight:800;color:var(--pink)}
+.logo span{color:var(--dark)}
+nav{display:flex;gap:24px;font-weight:600}
+nav a:hover{color:var(--pink)}
+.btn{display:inline-block;background:var(--pink);color:#fff;padding:13px 22px;border-radius:999px;font-weight:700;border:0;cursor:pointer}
+.btn.alt{background:#fff;color:var(--pink);border:1px solid var(--pink)}
+.hero{background:linear-gradient(135deg,#fff0f4,#fff 55%,#fde9ef);padding:78px 0}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px}
+.badge{display:inline-block;background:#ffe0e9;color:#b62655;padding:7px 13px;border-radius:999px;font-weight:700;font-size:14px;margin-bottom:18px}
+h1{font-size:clamp(42px,6vw,68px);line-height:1.05;margin-bottom:20px}
+.hero p{font-size:19px;color:var(--muted);max-width:590px;margin-bottom:28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-art{min-height:390px;border-radius:32px;background:linear-gradient(145deg,#f9b5c9,#fff);display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:0 20px 50px #e83e7022}
+.giftbox{font-size:150px;filter:drop-shadow(0 20px 15px #8e294a33)}
+.float{position:absolute;background:#fff;padding:13px 17px;border-radius:18px;box-shadow:0 12px 30px #00000012;font-weight:700}
+.f1{top:45px;left:30px}.f2{right:28px;top:100px}.f3{bottom:40px;left:70px}
+section{padding:72px 0}
+.section-head{text-align:center;margin-bottom:36px}
+.section-head h2{font-size:36px;margin-bottom:8px}
+.section-head p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px 18px;text-align:center;transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 30px #0000000d}
+.icon{font-size:42px;margin-bottom:10px}.card h3{margin-bottom:5px}.card p{color:var(--muted);font-size:14px}
+.products{background:var(--cream)}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.product{background:#fff;border-radius:22px;overflow:hidden;border:1px solid var(--line)}
+.product-img{height:210px;background:linear-gradient(135deg,#ffe0e9,#fff0f4);display:grid;place-items:center;font-size:80px}
+.product-body{padding:18px}.product-body h3{margin-bottom:5px}.price{color:var(--pink);font-size:20px;font-weight:800;margin:8px 0 14px}
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.about-box{background:var(--cream);border-radius:28px;padding:38px}
+.about h2{font-size:38px;margin-bottom:14px}.about p{color:var(--muted);margin-bottom:16px}
+.features{display:grid;gap:12px}.feature{padding:15px 18px;background:#fff;border:1px solid var(--line);border-radius:15px;font-weight:700}
+.contact{background:#241f25;color:#fff}
+.contact .section-head p{color:#d5cbd0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.contact-card{background:#302a31;border:1px solid #4b4149;border-radius:22px;padding:28px}
+.contact-card p{margin:12px 0;color:#ddd}
+footer{background:#181419;color:#bbb;padding:24px 0;text-align:center;font-size:14px}
+.mobile-menu{display:none}
+@media(max-width:800px){
+nav{display:none}.mobile-menu{display:block;font-size:25px}
+.hero{padding:55px 0}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+.cards{grid-template-columns:repeat(2,1fr)}.product-grid{grid-template-columns:1fr 1fr}
+.hero-art{min-height:300px}
+}
+@media(max-width:520px){
+.cards,.product-grid{grid-template-columns:1fr}h1{font-size:43px}.nav{height:64px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">Gift Shop <span>BD</span></a>
+    <nav>
+      <a href="#home">Home</a><a href="#categories">Categories</a><a href="#products">Products</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Order Now</a>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">🎁 Gifts made with love</span>
+      <h1>Make every moment a little more special.</h1>
+      <p>Discover thoughtful gifts for birthdays, couples, anniversaries, weddings and every beautiful occasion.</p>
+      <div class="actions">
+        <a class="btn" href="#products">Shop Gifts</a>
+        <a class="btn alt" href="#contact">Contact Us</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="giftbox">🎁</div>
+      <div class="float f1">💝 Birthday</div>
+      <div class="float f2">🌹 Anniversary</div>
+      <div class="float f3">🧸 Special Gift</div>
+    </div>
+  </div>
+</section>
+
+<section id="categories">
+  <div class="container">
+    <div class="section-head"><h2>Shop by Category</h2><p>Find a gift for every person and every occasion.</p></div>
+    <div class="cards">
+      <div class="card"><div class="icon">🎂</div><h3>Birthday</h3><p>Make their birthday unforgettable.</p></div>
+      <div class="card"><div class="icon">💕</div><h3>Couple Gifts</h3><p>Beautiful gifts for two.</p></div>
+      <div class="card"><div class="icon">🌹</div><h3>Anniversary</h3><p>Celebrate your special story.</p></div>
+      <div class="card"><div class="icon">💍</div><h3>Wedding</h3><p>Perfect gifts for a new journey.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="products">
+  <div class="container">
+    <div class="section-head"><h2>Featured Gifts</h2><p>Our sample collection — replace these with your own products.</p></div>
+    <div class="product-grid">
+      <article class="product"><div class="product-img">🎁</div><div class="product-body"><h3>Premium Gift Box</h3><p>A beautiful ready-to-gift surprise.</p><div class="price">৳ 999</div><a class="btn" href="#contact">Order Now</a></div></article>
+      <article class="product"><div class="product-img">🧸</div><div class="product-body"><h3>Cute Teddy Gift</h3><p>A sweet gift for someone special.</p><div class="price">৳ 799</div><a class="btn" href="#contact">Order Now</a></div></article>
+      <article class="product"><div class="product-img">🌹</div><div class="product-body"><h3>Romantic Gift Set</h3><p>Make your special day memorable.</p><div class="price">৳ 1,299</div><a class="btn" href="#contact">Order Now</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="container about-grid">
+    <div class="about-box"><h2>About Gift Shop BD</h2><p>Gift Shop BD is your destination for thoughtful and beautiful gifts for life's special moments.</p><p>Choose a gift, send us your details, and we'll help you make someone's day extra special.</p><a class="btn" href="#contact">Talk to Us</a></div>
+    <div class="features">
+      <div class="feature">✨ Carefully selected gift ideas</div>
+      <div class="feature">🎀 Beautiful presentation</div>
+      <div class="feature">💬 Easy order through WhatsApp / Facebook</div>
+      <div class="feature">🇧🇩 Serving customers across Bangladesh</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-head"><h2>Ready to send a gift?</h2><p>Contact Gift Shop BD and place your order.</p></div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Get in Touch</h3>
+        <p>📞 Phone: <strong>01601211880</strong></p>
+        <p>💬 WhatsApp: <strong>01601211880</strong></p>
+        <p>📘 Facebook: <strong>Gift Shop BD</strong></p>
+        <a class="btn" href="https://wa.me/8801601211880?text=Hello%20Gift%20Shop%20BD%2C%20I%20want%20to%20place%20an%20order." target="_blank">Order on WhatsApp</a>
+      </div>
+      <div class="contact-card">
+        <h3>Quick Order</h3>
+        <p>Send us the product name, quantity and delivery location on WhatsApp or Facebook Messenger.</p>
+        <p>We'll confirm availability, price and delivery details before finalizing your order.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 Gift Shop BD. All rights reserved.</footer>
+</body>
+</html>
